@@ -1,5 +1,8 @@
 <?php
-require_once(__DIR__ . '/../Models/Velha.php');
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+use Martin\VelhaGame\Models\Velha;
+
 session_start();
 header('Content-Type: application/json');
 header('Cache-Control: no-store');
