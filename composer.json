@@ -1,0 +1,15 @@
+{
+    "name": "martin/velha-game",
+    "autoload": {
+        "psr-4": {
+            "Martin\\VelhaGame\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "martinramosbr",
+            "email": "martinramostm@icloud.com"
+        }
+    ],
+    "require": {}
+}
