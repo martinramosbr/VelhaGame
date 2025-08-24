@@ -1,5 +1,6 @@
 {
     "name": "martin/velha-game",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Martin\\VelhaGame\\": "src/"
@@ -11,6 +12,9 @@
             "email": "martinramostm@icloud.com"
         }
     ],
+    "require": {
+        "php": "^8.1"
+    },
     "require-dev": {
         "pestphp/pest": "^4.0"
     },
