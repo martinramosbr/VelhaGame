@@ -1,3 +1,3 @@
 <?php
-require_once(__DIR__ . '/Views/board.php');
+require_once(__DIR__ . '/src/Views/board.php');
 

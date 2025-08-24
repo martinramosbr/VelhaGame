@@ -23,7 +23,7 @@ function render(data) {
 }
 
 function loadState() {
-    fetch("../Controllers/VelhaController.php?action=state", { credentials: "same-origin" })
+    fetch("../src/Controllers/VelhaController.php?action=state", { credentials: "same-origin" })
         .then(r => r.json())
         .then(render);
 }
@@ -35,7 +35,7 @@ function playMove(e) {
     const row = e.target.dataset.row;
     const col = e.target.dataset.col;
 
-    fetch("../Controllers/VelhaController.php?action=play", {
+    fetch("../src/Controllers/VelhaController.php?action=play", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         credentials: "same-origin",
@@ -46,7 +46,7 @@ function playMove(e) {
 }
 
 document.getElementById("reset").addEventListener("click", () => {
-  fetch("../Controllers/VelhaController.php?action=reset", { credentials: "same-origin" })
+  fetch("../src/Controllers/VelhaController.php?action=reset", { credentials: "same-origin" })
     .then(r => r.json())
     .then(render);
 });

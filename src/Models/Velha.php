@@ -1,4 +1,5 @@
 <?php
+namespace Martin\VelhaGame\Models;
 
 class Velha
 {
