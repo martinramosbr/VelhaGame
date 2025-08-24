@@ -1,5 +1,6 @@
 {
     "name": "martin/velha-game",
+    "description": "Jogo da velha em PHP usando MVC",
     "license": "MIT",
     "autoload": {
         "psr-4": {
