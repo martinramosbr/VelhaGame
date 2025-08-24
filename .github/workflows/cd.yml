@@ -25,4 +25,13 @@ jobs:
           style.css
           README.md
           tests/
-    
+  deploy:
+    runs-on: ubuntu-latest
+    needs: deliver
+
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: projetocompactado.zip
+      - name: Display structure of downloaded files
+        run: ls -R
