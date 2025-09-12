@@ -14,3 +14,12 @@ Abra o terminal e execute os seguintes comandos:
 ```bash
 php -S localhost:8000
 ```
+
+# constrói a imagem
+docker build -t velha-game .
+
+# executa o container
+docker run -d -p 8080:80 --name jogo-da-velha velha-game
+
+# Acesse o jogo em seu navegador
+http://localhost:8080
