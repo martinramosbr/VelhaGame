@@ -56,6 +56,17 @@ window.addEventListener("DOMContentLoaded", loadState);
 function updateBoard(boardState) {
     document.querySelectorAll(".cell").forEach(cell => {
         const r = cell.dataset.row, c = cell.dataset.col;
-        cell.textContent = boardState[r][c];
+        const value = boardState[r][c];
+        cell.textContent = value;
+        
+        // Remove classes anteriores
+        cell.classList.remove("x", "o");
+        
+        // Adiciona a classe apropriada baseada no valor
+        if (value === "X") {
+            cell.classList.add("x");
+        } else if (value === "O") {
+            cell.classList.add("o");
+        }
     });
 }
