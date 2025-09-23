@@ -10,7 +10,7 @@
 <body>
     <h1>Velha Game</h1>
     <div id="board"></div>
-    <p id="status"></p>
+    <p id="status" class="status"></p>
       <button id="reset">Reiniciar</button>
     <script src="../script.js"></script>
 </body>
