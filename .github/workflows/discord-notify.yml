@@ -1,0 +1,27 @@
+name: Discord Notification
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
+    steps:
+      - name: Send Discord Notification
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        with:
+          args: |
+            **Novo commit/merge no VelhaGame!**
+            - Autor: ${{ github.actor }}
+            - Commit: ${{ github.sha }}
+            - Mensagem: ${{ github.event.head_commit.message }}
+            - Link: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
